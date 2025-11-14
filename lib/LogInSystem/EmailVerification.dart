@@ -15,15 +15,19 @@ class Emailverification extends StatefulWidget {
 class _EmailverificationState extends State<Emailverification> {
   Future<void> sendVerificationEmail() async {
     User? user = FirebaseAuth.instance.currentUser;
-    if(user != null && user.emailVerified){
-       if (!mounted) return;
-      showError("You are already verified, cannot send another verification email", context, '');
+    if (user != null && user.emailVerified) {
+      if (!mounted) return;
+      showError(
+        "You are already verified, cannot send another verification email",
+        context,
+        '',
+      );
     }
     if (user != null && !user.emailVerified) {
       try {
         await user.sendEmailVerification();
         if (!mounted) return;
-        showComplete("Verification email sent", context, '');
+        showComplete("Verification email sent","The email is most likely in your spam inbox as I am not a well known software developer :>", context, '');
         startTimer();
       } catch (e) {
         if (!mounted) return;
@@ -116,8 +120,6 @@ class _EmailverificationState extends State<Emailverification> {
                   onPressed: () {
                     if (secondsLeft == 0) {
                       sendVerificationEmail();
-
-                      
                     } else {
                       showwarning("Please wait before resending.", context, '');
                       getEmailVerificationStatus();
@@ -140,7 +142,13 @@ class _EmailverificationState extends State<Emailverification> {
 
                     if (verified == true) {
                       // Email is verified
-                      print("user is verified");
+
+                      showComplete(
+                        "Account is verifired!",
+                        "Please procede now to the log in page",
+                        context,
+                        '/LogIn',
+                      );
                     } else {
                       // Email not verified or no user
                       showwarning("You are still not verified", context, '');

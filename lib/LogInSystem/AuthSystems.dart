@@ -85,7 +85,7 @@ Future<bool?> getEmailVerificationStatus() async {
 
 
 
-void showComplete(String message, BuildContext context, String routeName) {
+void showComplete(String title, String message, BuildContext context, String routeName) {
   AwesomeDialog(
     context: context,
     dialogType: DialogType.success,
@@ -93,13 +93,13 @@ void showComplete(String message, BuildContext context, String routeName) {
     dismissOnTouchOutside: false,
     headerAnimationLoop: false,
     animType: AnimType.bottomSlide,
-    title: message,
+    title: title,
     titleTextStyle: TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 28,
       color: Colors.green,
     ),
-    desc: "Please verify your email to continue.",
+    desc: message,
     descTextStyle: TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 18,

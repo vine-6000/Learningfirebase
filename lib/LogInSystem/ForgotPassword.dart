@@ -183,49 +183,7 @@ class _ForgotpasswordState extends State<Forgotpassword> {
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.02,
                         ),
-                        TextField(
-                          obscureText: isSeen,
-                          controller: getPasswordController,
-                          decoration: InputDecoration(
-                            labelText: 'Email Password',
-                            border: OutlineInputBorder(),
-                            suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  isSeen = !isSeen;
-                                });
-                              },
-                              icon: Icon(
-                                isSeen
-                                    ? Icons.visibility
-                                    : Icons.visibility_off,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.02,
-                        ),
-                        TextField(
-                          obscureText: isSeen2,
-                          controller: getConfirmPasswordController,
-                          decoration: InputDecoration(
-                            labelText: 'Confirm Password',
-                            border: OutlineInputBorder(),
-                            suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  isSeen2 = !isSeen2;
-                                });
-                              },
-                              icon: Icon(
-                                isSeen2
-                                    ? Icons.visibility
-                                    : Icons.visibility_off,
-                              ),
-                            ),
-                          ),
-                        ),
+                       
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.03,
                         ),

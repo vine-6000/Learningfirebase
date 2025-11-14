@@ -55,7 +55,7 @@ class _SignUpState extends State<SignUp> {
     if (errorMessage == null) {
       // Account created successfully
      
-      showComplete("Account created Succesfuly", context, '/Emailverification');
+      showComplete("Horay!","Account created Succesfuly", context, '/Emailverification');
       
     } else if (errorMessage == 'This email is already registered.') {
       // If the email already exists, check if it's verified
