@@ -141,12 +141,12 @@ class _ForgotpasswordState extends State<Forgotpassword> {
                 constraints: BoxConstraints(
                   minWidth: 200,
                   maxWidth: 700,
-                  minHeight: 400,
+                  minHeight: 300,
                   maxHeight: 500,
                 ),
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.8,
-                  height: MediaQuery.of(context).size.height * 0.33,
+                  height: MediaQuery.of(context).size.width * 0.30,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
@@ -191,7 +191,7 @@ class _ForgotpasswordState extends State<Forgotpassword> {
                           onPressed: () {
                             //LoginFunction,
                           },
-                          child: Text('SignIn'),
+                          child: Text('Reset Password'),
                           style: ElevatedButton.styleFrom(
                             minimumSize: Size(double.infinity, 50),
                           ),
