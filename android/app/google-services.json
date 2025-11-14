@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "628210298425",
+    "project_id": "tryng-firebase",
+    "storage_bucket": "tryng-firebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628210298425:android:ba8946f0e86f7b36d227e8",
+        "android_client_info": {
+          "package_name": "com.example.learningfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIlxajIqtCAclTAN2BqTBs5JuQbYaSMcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
